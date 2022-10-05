@@ -23,9 +23,14 @@
   gap: 8px;
 }
 
+.container__buttonsAncor {
+  text-align: center;
+}
+
 .buttons__ancor {
   padding: 3px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .button {
