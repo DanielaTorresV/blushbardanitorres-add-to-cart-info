@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.container__item {
+  width: 200px;
+  padding: 5px;
+}
+
+.container__resumen {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__resumenTitle {
+  text-align: center;
+}
+.container__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.container__buttonsAncor {
+  text-align: center;
+}
+
+.buttons__ancor {
+  padding: 3px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button {
+  padding: 10px;
+  cursor: pointer;
+}
+
