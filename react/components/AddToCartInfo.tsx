@@ -1,24 +1,39 @@
 import React from "react";
 import { useProduct } from "vtex.product-context";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
-import ProductGroup from "./ProductGroup";
-import Totalizers from "./Totalizers";
+//import ProductGroup from "./ProductGroup";
 import ButtonGroup from "./ButtonGroup";
 
 const AddToCartInfo = () => {
   const productInfo = useProduct();
-  const { orderForm: {
-    items,
-    totalizers
+  const {orderForm: {
+    items
   }} = useOrderForm();
 
   console.log("Product Info:", productInfo);
-  console.log("Order Form Info:", items, totalizers);
 
   return(
     <>
-      <ProductGroup />
-      <Totalizers />
+      {
+        items.map((item: any, index: number) => {
+          return (
+            <div key={index}>
+              <div>
+                <img src={item.imageUrls.at1x}/>
+              </div>
+              <div>
+                <p>{item.name}</p>
+                <p>{item.id}</p>
+                <p>${item.price / 100}</p>
+                <p>Cant: {item.quantity}</p>
+              </div>
+            </div>
+          )
+        })
+      }
+      <div>
+        <p>Tenemos {items.length} items en tu compra</p>
+      </div>
       <ButtonGroup />
     </>
   )

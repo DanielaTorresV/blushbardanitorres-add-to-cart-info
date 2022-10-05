@@ -1,9 +1,24 @@
-import React from "react";
+/*import React from "react";
 
-const ProductGroup = () => {
+type Props = {
+  products: [{}]
+}
+
+const ProductGroup = ({products}: Props) => {
+  console.log("Mis productos en ProductGrop son:", products);
   return(
-    <div>ProductGroup</div>
+    <>
+      {
+        products.map((product, index: number) => {
+          return(
+            <div key={index}>
+              Mi item: {product}
+            </div>
+          )
+        })
+      }
+    </>
   )
 }
 
-export default ProductGroup
+export default ProductGroup*/
