@@ -5,23 +5,19 @@ import styles from './styles.css';
 
 const ButtonGroup = ({ blockClass } : {blockClass:  string}) => {
 const container__buttons = generateBlockClass(styles.container__buttons, blockClass),
-      container__buttonsAncor = generateBlockClass(styles.container__buttonsAncor, blockClass),
-      buttons__ancor = generateBlockClass(styles.buttons__ancor, blockClass),
-      button = generateBlockClass(styles.button, blockClass)
+      button__redirect = generateBlockClass(styles.button__redirect, blockClass)
 
   return(
     <div className={container__buttons}>
-      <div className={container__buttonsAncor}>
-        <a href="/checkout" className={buttons__ancor}>
-          FINALIZA TU COMPRA
-        </a>
-      </div>
-       <Link to="/">
-        <div>
-          <button className={button}>
+      <Link to="/">
+          <button className={button__redirect}>
             CONTINÚA COMPRANDO
           </button>
-        </div>
+      </Link>
+       <Link to="/checkout">
+          <button className={button__redirect}>
+            FINALIZA TU COMPRA
+          </button>
       </Link>
     </div>
 
