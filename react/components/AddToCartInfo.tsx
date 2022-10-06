@@ -41,6 +41,7 @@ const AddToCartInfo = ({ blockClass } : {blockClass:  string}) => {
         <div>
           <h3 className={container__resumenTitle}>¡Resumen de tu compra!</h3>
           <p>Tenemos {items.length} items en tu compra</p>
+          <p>Total: Por Calcular</p>
         </div>
         <ButtonGroup blockClass={blockClass}/>
       </div>
